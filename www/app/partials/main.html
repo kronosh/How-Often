@@ -1,0 +1,46 @@
+<div id="howOftenApp">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#">How Often</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#help">Help</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Test</h2>
+
+        <form id="tasks-add-form" ng-submit="addTask()">
+            <input id="new-task" name="newTask" ng-model="newTaskDescription" placeholder="What do you want to monitor?" type="text">
+        </form>
+
+        <div id="tasks">
+            <ul id="task-list">
+                <li ng-repeat="task in tasks">
+                    <form id="tasks-update-form" ng-submit="markTask(task)">
+                        {{task.Description}}
+                        <ul>
+                            <li ng-repeat="occ in task.Occurrences">
+                                {{occ}}
+                            </li>
+                        </ul>
+                        <br />
+                        <input type="submit" />
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
