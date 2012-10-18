@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.kronosh.helloworld"
-        version   = "2.0.0">
-    <name>Hello World</name>
+        id        = "com.kronosh.howOften"
+        version   = "1.0.0">
+    <name>How Often</name>
 
     <description>
-        Hello World app using Phonegap, AngluarJs, and Bootstrap
+        Keep track of how often you perform activities
     </description>
 
     <author href="http://www.kronosh.com" email="support@kronosh.com">

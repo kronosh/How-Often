@@ -26,9 +26,13 @@
             <input id="new-task" name="newTask" ng-model="newTaskDescription" placeholder="What do you want to monitor?" type="text">
         </form>
 
+        <form id="tasks-clear-form" ng-submit="clearTasks()">
+            <input type="submit" name="clearTasks" value="Clear Activities" />
+        </form>
+
         <div id="tasks">
             <ul id="task-list">
-                <li ng-repeat="task in tasks">
+                <li ng-repeat="task in tasks | orderBy:Description">
                     <form id="tasks-update-form" ng-submit="markTask(task)">
                         {{task.Description}}
                         <ul>
