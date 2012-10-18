@@ -13,7 +13,7 @@ function LocalStorage() {
             return;
         }
 
-        window.localStorage.setItem(this.storageKey, JSON.stringify(value));
+        window.localStorage[this.storageKey] = JSON.stringify(value);
     };
 
     this.Load = function()
@@ -23,7 +23,12 @@ function LocalStorage() {
             return;
         }
 
-        var jsonData = window.localStorage.getItem(this.storageKey);
+        var jsonData = window.localStorage[this.storageKey];
+
+        if (!jsonData)
+        {
+            return null;
+        }
 
         return JSON.parse(jsonData);
     };
