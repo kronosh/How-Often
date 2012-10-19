@@ -4,6 +4,7 @@
 
 function LocalStorage() {
 
+    var $this = this;
     this.storageKey = "kronosh.howOften.data";
 
     this.Save = function(value)
@@ -13,7 +14,7 @@ function LocalStorage() {
             return;
         }
 
-        window.localStorage[this.storageKey] = JSON.stringify(value);
+        window.localStorage[$this.storageKey] = JSON.stringify(value);
     };
 
     this.Load = function()
@@ -23,7 +24,7 @@ function LocalStorage() {
             return;
         }
 
-        var jsonData = window.localStorage[this.storageKey];
+        var jsonData = window.localStorage[$this.storageKey];
 
         if (!jsonData)
         {
